@@ -1,0 +1,13 @@
+<svg id="Loader_1_" data-name="Loader (1)" xmlns="http://www.w3.org/2000/svg" width="106" height="106" viewBox="0 0 106 106">
+  <g id="Grupo_13" data-name="Grupo 13">
+    <circle id="Elipse_8" data-name="Elipse 8" cx="51" cy="51" r="51" transform="translate(2 2)" fill="#fff" stroke="#333" stroke-width="4"/>
+    <g id="Grupo_12" data-name="Grupo 12">
+      <path id="Trazado_118" data-name="Trazado 118" d="M51,0a51,51,0,0,1,51,51c-1.134,2.846,1.244-.06-2.678,0-7.03.128-24.448,0-43.32,0-19.322,0-43.068.8-53.513,0-4.324-.323-.528,1.948-2.489,0A51,51,0,0,1,51,0Z" transform="translate(2 2)" fill="#f22539" stroke="#333" stroke-width="4"/>
+    </g>
+    <path id="Trazado_116" data-name="Trazado 116" d="M.393,53H105.607" fill="none" stroke="#333" stroke-width="4"/>
+    <circle id="Elipse_10" data-name="Elipse 10" cx="20.807" cy="20.807" r="20.807" transform="translate(32.193 32.192)" fill="#fff"/>
+    <circle id="Elipse_11" data-name="Elipse 11" cx="18.807" cy="18.807" r="18.807" transform="translate(34.193 34.192)" fill="none" stroke="#333" stroke-width="4"/>
+    <path id="Trazado_117" data-name="Trazado 117" d="M91.731,36.708A42.122,42.122,0,0,0,65.367,12.843" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <circle id="Elipse_12" data-name="Elipse 12" cx="10.385" cy="10.385" r="10.385" transform="translate(42.615 42.615)" fill="none" stroke="gray" stroke-width="2"/>
+  </g>
+</svg>
