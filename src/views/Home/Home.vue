@@ -10,12 +10,15 @@ export default {
   name: 'Home',
   components: {},
   created() {
-    setInterval(() => {
-      this.hideLoader();
-    }, 1000);
+    this.showLoader();
   },
   methods: {
     ...mapActions('listPokemons', ['hideLoader']),
+    showLoader() {
+      setInterval(() => {
+        this.hideLoader();
+      }, 1000);
+    },
   },
 };
 </script>
