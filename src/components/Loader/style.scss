@@ -33,3 +33,18 @@
       100% { -webkit-transform: rotate(360deg); }
   }
 }
+
+
+.loader-enter {
+  opacity: 0;
+}
+
+.loader-leave-active {
+  opacity: 0;
+}
+
+.loader-enter .loader-container,
+.loader-leave-active .loader-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}

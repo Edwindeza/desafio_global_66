@@ -29,6 +29,7 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
+        color: #353535;
         ::placeholder {
           color: #BFBFBF;
           font-weight: 400;
@@ -138,6 +139,7 @@
         font-size: 18px;
         line-height: 22px;
         cursor: pointer;
+        transition: 0.5s;
         :nth-child(1){
           margin-right: 10px;
         }
@@ -146,6 +148,9 @@
         }
         &.active{
           background: #F22539;
+          &:focus{
+            background: #C00E20;
+          }
         }
 
       }

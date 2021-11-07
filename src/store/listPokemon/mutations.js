@@ -1,9 +1,20 @@
-export const getListPokemons = (state) => {
-  console.log('lala');
-  state.pokemons = [1, 2];
+export const setListPokemons = (state, pokemons) => {
+  state.pokemons = [...pokemons];
+  state.isLoading = false;
 };
-export const getDetailPokemon = (state, pokemonId) => {
-  console.log(pokemonId);
-  const pokemon = {};
+
+export const setPokemon = (state, pokemon) => {
   state.pokemon = pokemon;
+  state.isLoading = false;
+};
+
+export const setLoader = (state, value) => {
+  state.isLoading = value;
+};
+
+export const setFavorite = (state, pokemons) => {
+  state.pokemons = pokemons;
+};
+export const updateStatus = (state) => {
+  state.updatePokemons = !state.updatePokemons;
 };

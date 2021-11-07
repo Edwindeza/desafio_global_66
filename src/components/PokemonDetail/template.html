@@ -1,39 +1,41 @@
 <transition name="modal" >
   <div class="modal-mask">
-    <div class="modal-wrapper">
-      <div class="modal-container">
-        <div class="modal-header">
-          <img class="pokemon" src="@/assets/pokemon.jpg" alt="pokemon">
-          <img src="@/assets/x.svg" alt="" class="close"  @click="$emit('close')">
-        </div>
+    <div class="modal-wrapper" @click="$emit('close')"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <img class="pokemon" :src="pokemon.imageUrl" alt="pokemon">
+        <img src="@/assets/x.svg" alt="" class="close"  @click="$emit('close')">
+      </div>
 
-        <div class="modal-body">
-          <p>
-            <span>Name:</span>
-            Squirtle
-          </p>
-          <p>
-            <span>Weight:</span>
-            20
-          </p>
-          <p>
-            <span>Name:</span>
-            Squirtle
-          </p>
-          <p>
-            <span>Types:</span>
-            Normal, Water
-          </p>
-        </div>
+      <div class="modal-body">
+        <p id="pokemonName">
+          <span>Name:</span>
+          {{pokemon.name}}
+        </p>
+        <p>
+          <span>Weight:</span>
+          {{pokemon.weight}}
+        </p>
+        <p>
+          <span>Height:</span>
+          {{pokemon.height}}
+        </p>
+        <p>
+          <span>Types:</span>
+          {{pokemon.types}}
+        </p>
+      </div>
 
-        <div class="modal-footer">
-          <button class="modal-default-button" pokemon="pokemon" @click="shared()">
-            Share to my friends
-          </button>
-          <div class="img">
-            <img @click="setFavoritePokemon" src="@/assets/star_yellow.svg" alt="">
-          </div>          
-        </div>
+      <div class="modal-footer">
+        <button class="modal-default-button"
+          pokemon="pokemon"
+          @click="shared()">
+          Share to my friends
+        </button>
+        <div class="img" @click="setFavoritePokemon(pokemon)">
+          <img v-if="pokemon.favorite" src="@/assets/star_yellow.svg" alt="">
+          <img v-else src="@/assets/star_gray.svg" alt="">
+        </div>          
       </div>
     </div>
   </div>

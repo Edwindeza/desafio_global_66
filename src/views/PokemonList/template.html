@@ -6,35 +6,61 @@
           <input type="text" placeholder="Search" v-model="searchValue">
           <img src="@/assets/search.svg" alt="">
         </div>
-        <div v-if="pokemons.length > 0" class="list-body-list">
-          <div v-for="pokemon in pokemons" class="list-body-list-item">
-            <p @click="OpenModal(pokemon)">name</p>
-            <div class="img">
-              <img src="@/assets/star_gray.svg" alt="">
-            </div>            
+        <div v-if="flagFilterList">
+          <div v-if="pokemonsByName.length" class="list-body-list">
+            <div v-for="pokemon in pokemonsByName" class="list-body-list-item">
+              <p @click="OpenModal(pokemon)">{{pokemon.name}}</p>
+              <div class="img" @click=setFavoritePokemon(pokemon) >
+                <img v-if="pokemon.favorite" src="@/assets/star_yellow.svg" alt="">
+                <img v-else src="@/assets/star_gray.svg" alt="">
+              </div>            
+            </div>
+          </div>
+          <div v-else class="list-body-list">
+            <div class="lose">
+              <h3>
+                Uh-oh!
+              </h3>
+              <p>
+                You look lost on your journey!
+              </p>
+              <router-link to="/">Go back home</router-link>
+            </div>
           </div>
         </div>
-        <div v-else  class="list-body-list">
-          <div class="lose">
-            <h3>
-              Uh-oh!
-            </h3>
-            <p>
-              You look lost on your journey!
-            </p>
-            <router-link to="/">Go back home</router-link>
+        <div v-else>
+          <div v-if="pokemonsByFavorite.length > 0" class="list-body-list">
+            <div v-for="pokemon in pokemonsByFavorite" class="list-body-list-item">
+              <p @click="OpenModal(pokemon)">{{pokemon.name}}</p>
+              <div class="img" @click=setFavoritePokemon(pokemon) >
+                <img v-if="pokemon.favorite" src="@/assets/star_yellow.svg" alt="">
+                <img v-else src="@/assets/star_gray.svg" alt="">
+              </div>            
+            </div>
           </div>
+          <div v-else class="list-body-list">
+            <div class="lose">
+              <h3>
+                Uh-oh!
+              </h3>
+              <p>
+                You look lost on your journey!
+              </p>
+              <router-link to="/">Go back home</router-link>
+            </div>
+          </div>
+
         </div>
       </div>
-      <PokemonDetail v-if="showModal" :pokemon="pokemon"  @close="showModal = false"></PokemonDetail>
+      <PokemonDetail v-if="showModal" :favorite="pokemon.favorite"  @close="showModal = false"></PokemonDetail>
     </div>
     <div class="list-filter">
       <div class="list-filter-content">
-        <button class="active">
+        <button @click="changeFilter(true)" :class="{active: flagFilterList}">
           <img src="@/assets/list.svg" alt="">
           All
         </button>
-        <button>
+        <button @click="changeFilter(false)" :class="{active: !flagFilterList}">
           <img src="@/assets/star_white.svg" alt="">
           Favorites
         </button>

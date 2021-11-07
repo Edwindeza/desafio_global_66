@@ -1,7 +1,25 @@
-body{
-  margin: 0;
-}
+
 p,a,h1,h2,h3,h4,h5,h6,li{
   font-family: Lato;
   font-style: normal;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#F22539;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #F22539;
 }

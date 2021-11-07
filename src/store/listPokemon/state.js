@@ -1,4 +1,6 @@
 export default () => ({
   pokemon: {},
-  pokemons: [1],
+  pokemons: [],
+  isLoading: true,
+  updatePokemons: false,
 });
