@@ -1,8 +1,7 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils';
+import { createLocalVue } from '@vue/test-utils';
 import Vuex from 'vuex';
 import listPokemonStore from '@/store/listPokemon';
 import { listPokemonState } from '../../../mock-data/test-list-pokemon-state';
-import Loader from '@/common/components/Loader/Loader.vue';
 
 const localVue = createLocalVue();
 localVue.use(Vuex);
