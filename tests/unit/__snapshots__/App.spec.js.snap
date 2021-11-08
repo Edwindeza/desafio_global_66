@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prueba App Component Debe de hacer match con el snapshot 1`] = `
+<div id="app">
+  <router-view></router-view>
+  <loader-stub></loader-stub>
+</div>
+`;

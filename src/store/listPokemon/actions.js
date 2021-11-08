@@ -1,4 +1,4 @@
-import pokemonAPi from '@/api/pokemonsApi';
+import pokemonAPi from '@/common/api/pokemonsApi';
 
 export const getListPokemons = async ({ commit }) => {
   const { data } = await pokemonAPi.get('pokemon?offset=0&limit=150,');
@@ -10,11 +10,7 @@ export const getDetailPokemon = async ({ commit, state }, name) => {
   const { data } = await pokemonAPi.get(`pokemon/${name}`);
   let types = '';
   data.types.forEach((slot) => {
-    if (types === '') {
-      types = slot.type.name;
-    } else {
-      types = `${types}, ${slot.type.name}`;
-    }
+    types = (types === '') ? slot.type.name : `${types}, ${slot.type.name}`;
   });
   const pokemon = {
     imageUrl: data.sprites.other.dream_world.front_default,
@@ -47,5 +43,4 @@ export const setFavorite = ({ commit, state }, pokemon) => {
   }
   tempPokemons[index] = tempPokemon;
   commit('setFavorite', tempPokemons);
-  commit('updateStatus');
 };

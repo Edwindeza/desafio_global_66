@@ -13,8 +13,6 @@ export const setLoader = (state, value) => {
 };
 
 export const setFavorite = (state, pokemons) => {
-  state.pokemons = pokemons;
-};
-export const updateStatus = (state) => {
+  state.pokemons = [...pokemons];
   state.updatePokemons = !state.updatePokemons;
 };

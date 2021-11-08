@@ -2,12 +2,12 @@
 <template src="./template.html"></template>
 
 <script>
-// @ is an alias to /src
+
 import { mapActions, mapGetters, mapState } from 'vuex';
-import PokemonDetail from '@/components/PokemonDetail/PokemonDetail.vue';
+import PokemonDetail from '@/common/components/PokemonDetail/PokemonDetail.vue';
 
 export default {
-  name: 'Home',
+  name: 'Pokedex',
   components: {
     PokemonDetail,
   },
@@ -20,10 +20,6 @@ export default {
       showModal: false,
       searchValue: '',
       flagFilterList: true,
-      // pokemons: [
-      //   1, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3,
-      //   2, 3, 4, 2, 3, 4, 4, 2, 3, 4, 2, 3, 4, 3, 4, 2, 3, 4,
-      // ],
       pokemon: '',
     };
   },

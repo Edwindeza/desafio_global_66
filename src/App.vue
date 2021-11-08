@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view ></router-view>
     <Loader></Loader>
   </div>
 
@@ -8,7 +8,7 @@
 
 <script>
 
-import Loader from '@/components/Loader/Loader.vue';
+import Loader from '@/common/components/Loader/Loader.vue';
 
 export default ({
   name: 'App',

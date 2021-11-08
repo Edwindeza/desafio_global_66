@@ -12,11 +12,13 @@ const routes = [
   },
   {
     path: '/pokedex',
-    name: 'Pokemon List',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/PokemonList/PokemonList.vue'),
+    name: 'pokedex',
+    component: () => import('@/views/PokemonList/PokemonList.vue'),
+  },
+  {
+    path: '*',
+    name: '404',
+    redirect: '/',
   },
 ];
 
